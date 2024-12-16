@@ -1,0 +1,548 @@
+#=======================================================================
+# PoE2 EA Loot Filter by CYBERION
+# Filter v1.4b - 16/12/2024
+# Revised by Sanguine_______	
+#=======================================================================
+
+#Show # CURRENCY TEST - SCROLL OF WISDOM
+#BaseType == "Scroll of Wisdom"
+#	Class "Currency"
+#	SetTextColor 32 255 0
+#	SetBorderColor 100 50 30 255
+#	SetFontSize 45
+	
+
+#==============================
+#  RUNES CHARMS TRIALS JEWELS
+#==============================
+
+
+Show # Runes
+	Class == "Socketable"
+	BaseType "Rune"
+#	SetTextColor 200 0 127 255
+#	SetBorderColor 255 0 127 200
+	SetTextColor 0 240 190
+	SetFontSize 36
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Triangle
+	
+Show # SOUL CORES
+	Class == "Socketable"	
+	BaseType "Soul Core"
+	SetTextColor 0 240 190
+	SetBorderColor 0 240 190 255
+	SetFontSize 36
+	PlayEffect Cyan Temp
+	MinimapIcon 1 Cyan Triangle
+	
+Show # TIMELESS JEWEL
+	Class == "Socketable"	
+	BaseType "Timeless"
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 20 110 220
+	SetFontSize 36
+	PlayEffect Blue
+	MinimapIcon 0 Blue Triangle
+
+Show # Charms
+	BaseType "Charm"
+	SetTextColor 210 100 255 255
+	SetBorderColor 127 90 255 255
+	SetFontSize 36
+
+Show # Trial Coins
+	Class == "Trial Coins" "Inscribed Ultimatum"
+#	BaseType "Barya" "Ultimatum"
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 127 200
+	SetFontSize 36
+	MinimapIcon 2 Green Square
+	
+Show # Jewels Rare
+	Rarity Rare
+	Class == "Jewels"
+	SetFontSize 36
+	SetTextColor 220 220 0 255
+	SetBorderColor 240 240 0 255
+	SetBackgroundColor 120 120 0 225
+	MinimapIcon 2 Yellow Diamond
+
+Show # Jewels Magic
+	Rarity Normal Magic
+	Class == "Jewels"
+	SetFontSize 36
+	SetTextColor 0 75 250 255
+	SetBorderColor 0 100 240 255
+	SetBackgroundColor 0 20 40 255
+	MinimapIcon 2 Blue Diamond
+
+Show # RELICS
+	Class "Relic"
+	SetTextColor 255 0 127 255
+	SetBorderColor 255 0 127 200
+	SetFontSize 36
+	MinimapIcon 2 Pink Triangle
+	PlayEffect Pink	Temp
+
+
+#==============================
+#         SKILL GEMS
+#==============================
+
+
+	Show # ALL GEMS
+	Class == "Skill Gems" "Support Gems"
+	SetFontSize 45
+	SetTextColor 0 255 255 200
+	SetBorderColor 0 255 255 200
+	SetBackgroundColor 0 0 0
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Circle
+	
+	Show # Skill Gems
+	BaseType == "Uncut Skill Gem"
+	SetFontSize 40
+	SetTextColor 0 255 255 200
+	SetBorderColor 225 0 0 200
+#	SetBackgroundColor 0 0 0
+	SetBackgroundColor 50 0 0 220
+	PlayEffect Red
+	MinimapIcon 2 Cyan Circle
+	
+	Show # Support Gems
+	BaseType == "Uncut Support Gem"
+	SetFontSize 40
+	SetTextColor 0 255 255 200
+	SetBorderColor 0 225 0 200
+#	SetBackgroundColor 0 0 0
+	SetBackgroundColor 0 50 0 220
+	PlayEffect Green
+	MinimapIcon 2 Cyan Circle
+	
+	Show # Spirit Gems
+	BaseType == "Uncut Spirit Gem"
+	SetFontSize 40
+	SetTextColor 0 255 255 200
+	SetBorderColor 225 225 0 200
+#	SetBackgroundColor 0 0 0
+	SetBackgroundColor 50 50 0 220
+	PlayEffect Yellow
+	MinimapIcon 2 Cyan Circle
+
+
+#==============================
+#           CURRENCY
+#==============================
+
+
+Show # CURRENCY - SCROLL OF WISDOM
+BaseType == "Scroll of Wisdom"
+	SetFontSize 30
+#	SetTextColor 32 255 0
+	SetBorderColor 120 60 50 255
+	
+Show # Currency STACKS
+	Class == "Stackable Currency"
+	StackSize >= 3
+	BaseType "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Orb of Alchemy" "Orb of Chance" "Glassblower's Bauble" "Exalted Orb"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 240 90 35 255
+	PlayEffect Yellow
+	MinimapIcon 0 Orange Circle
+	
+Show # Currency TIER 0
+	Class == "Stackable Currency"
+	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
+	SetFontSize 45
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+	
+Show # Currency TIER 1
+	Class == "Stackable Currency"
+	BaseType "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 240 90 35 255
+	PlayEffect Yellow
+	MinimapIcon 0 Orange Circle
+	
+Show # Currency TIER 2
+	Class == "Stackable Currency"
+	BaseType "Exalted Orb" "Chaos Orb" "Vaal Orb" "Orb of Alchemy" "Glassblower's Bauble" "Lesser Jeweller's Orb"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 249 150 25 255
+#	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 Orange Circle
+	
+Show # Currency TIER 3
+	Class == "Stackable Currency"
+	BaseType "Regal Orb" "Artificer's Orb" "Exotic"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 213 159 0 255
+#	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 Yellow Circle
+	
+Show # Currency TIER 4
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	MinimapIcon 2 White Circle
+
+
+
+
+Show # SHARDS TIER 1
+	Class == "Stackable Currency"
+	BaseType "Regal Shard" "Chance Shard"
+	SetFontSize 36
+	SetBorderColor 180 158 135 255
+#	SetBorderColor 222 184 135 205
+	
+Show # SHARDS TIER 2
+	Class == "Stackable Currency"
+	BaseType "Transmutation Shard" "Artificer's Shard"
+	SetFontSize 30
+	SetBackgroundColor 20 20 0 200
+
+
+
+
+Show # ESSENCE TIER 1
+	Class == "Stackable Currency"
+	BaseType "Greater Essence of"
+	SetFontSize 36
+	SetTextColor 255 255 255 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 125 160 125 255
+	PlayEffect Green
+	MinimapIcon 1 Green Diamond
+	
+Show # ESSENCES TIER 2
+	Class == "Stackable Currency"
+	BaseType "Essence of"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 125 160 125 255
+	PlayEffect Green Temp
+	MinimapIcon 2 Green Diamond
+
+
+	
+Show # WAYSTONES
+	BaseType "Waystone"
+	Rarity <= Rare
+	SetFontSize 36
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	PlayAlertSound 4 300
+	PlayEffect White
+	MinimapIcon 1 White Square
+
+	
+Show # DELIRIUM and OMENS 
+	Class "Currency"
+	BaseType "Distilled" "Catalyst" "Omen"
+	SetTextColor 245 190 132
+	SetBorderColor 245 190 132
+	SetBackgroundColor 76 51 12
+	PlayEffect White
+	MinimapIcon 2 White Circle
+
+	
+Show # FRAGMENTS and LOGBOOKS
+	BaseType "Expedition Logbook" " Fragment" "Breachstone" "Simulacrum" " Tablet" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+	SetTextColor 255 207 255
+	SetBorderColor 255 207 255
+	SetBackgroundColor 65 20 80
+
+	
+Show # SPLINTERS
+	Class "Currency"
+	BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+	SetTextColor 245 190 132
+	SetBorderColor 245 190 132
+
+	
+#==============================
+#      GOLD and TRIAL KEYS
+#==============================
+	
+
+Show # GOLD BIG
+	BaseType == "Gold"
+	StackSize >= 500
+	SetFontSize 36
+#	SetTextColor 240 210 150 255
+#	SetBackgroundColor 0 0 0 205
+	PlayEffect Yellow Temp
+
+#Show # GOLD SMALL
+	BaseType == "Gold"
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 0 0 180
+
+Show # BRONZE KEY
+	BaseType "Bronze Key"
+	SetFontSize 36
+	SetTextColor 0 205 0 255
+	SetBorderColor 205 127 50 255
+	SetBackgroundColor 0 0 0 240
+	
+Show # SILVER KEY
+	BaseType "Silver Key"
+	SetFontSize 36
+	SetTextColor 0 205 0 255
+	SetBorderColor 192 192 192 255
+	SetBackgroundColor 0 0 0 240
+	
+Show # GOLD KEY
+	BaseType "Gold Key"
+	SetFontSize 36
+	SetTextColor 0 205 0 255
+	SetBorderColor 255 235 0 255
+	SetBackgroundColor 0 0 0 240
+
+
+	
+	
+#==============================
+#            ITEMS
+#==============================
+
+
+Show # AMULETS RINGS BELTS
+	Class == "Rings" "Amulets" "Belts"
+	Rarity Normal Magic Rare
+	SetFontSize 30
+	SetBorderColor 200 0 0 170
+	AreaLevel < 65
+
+
+Show # LEGENDARY ALL
+	Rarity Unique
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 100 50 30 255
+	SetBackgroundColor 175 96 37 255
+	PlayAlertSound 1 300
+	PlayEffect Brown
+	MinimapIcon 1 Brown Star
+
+#	Show # LEGENDARY TIER 0
+#	Rarity Unique	
+#	SetFontSize 45
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 175 96 37 255
+#	PlayAlertSound 1 300
+#	PlayEffect Yellow
+#	MinimapIcon 0 Yellow Star
+
+Show # rares
+	Sockets = 0
+	Quality = 0
+	Rarity Rare
+	AreaLevel < 65
+	SetFontSize 36
+	
+Show # Magic
+	Sockets = 0
+	Quality = 0
+	Rarity Magic
+	AreaLevel < 65
+	SetFontSize 30
+	
+Show # Normal
+	Sockets = 0
+	Quality = 0
+	Rarity Normal
+	AreaLevel < 65
+	SetFontSize 26
+	
+	
+#==============================
+#           SOCKETS
+#==============================
+
+
+Show # NORMAL
+	#Sockets = "S" "SS" "SSS"
+	Sockets > 0
+	Rarity Normal
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+
+Show # MAGIC
+	#Sockets = "S" "SS" "SSS"
+	Sockets > 0
+	Rarity Magic
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+
+Show # RARE
+	#Sockets = "S" "SS" "SSS"
+	Sockets > 0
+	Rarity  Rare
+	SetFontSize 36
+	SetBorderColor 255 255 255 255
+
+
+
+#==============================
+#           QUALITY
+#==============================
+
+
+Show # NORMAL
+	Quality > 0
+	Rarity Normal
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+	AreaLevel < 65
+	
+Show # NORMAL
+	Quality >= 10
+	Rarity Normal
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+	AreaLevel >= 65
+
+Show # MAGIC
+	Quality > 0
+	Rarity Magic
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+	AreaLevel < 65
+	
+Show # MAGIC
+	Quality >= 10
+	Rarity Magic
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+	AreaLevel >= 65
+
+Show # RARE
+	Quality > 0
+	Rarity  Rare
+	SetFontSize 36
+	SetBorderColor 255 255 255 255
+	AreaLevel < 65
+	
+Show # RARE
+	Quality >= 10
+	Rarity  Rare
+	SetFontSize 36
+	SetBorderColor 255 255 255 255
+	AreaLevel >= 65
+
+
+#==============================
+#       ENDGAME FILTER
+#==============================
+
+#	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Flask"
+#	BaseType "Expert " "Advanced "
+
+Hide # ALL WHITE ITEMS
+	Rarity Normal
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Flask" "Focus"
+	AreaLevel >= 65
+
+Hide # ARMOUR - under lvl_58
+	Rarity Magic
+	Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields"
+#	Class "Focus"
+	DropLevel <= 58
+	AreaLevel >= 65
+	
+Hide # WEAPONS I - under lvl_50
+	Rarity Magic
+	Class "Mace" "Quarter" "Bow" "Crossbow"
+	DropLevel <= 50
+	AreaLevel >= 65
+	
+Hide # WEAPONS II - under lvl_43
+	Rarity Magic
+	Class "Quiver"
+#	Class "Staff" "Wand" "Sceptre" - Does not work yet. Looks like Database error on GGG-side. Staff, Wand and Scepters will be shown at any DropLevel
+	DropLevel <= 43
+	AreaLevel >= 65
+	
+Hide # AMULETS RINGS BELTS - Low Tier normal and magic
+	Class "Rings" "Amulets" "Belts"
+	BaseType "Emerald" "Iron" "Unset" "Stellar" "Lazuli" "Pearl" "Jade" "Crimson" "Azure" "Amber" "Lapis" "Rawhide" "Utility" "Fine" "Linen" "Long" "Plate" "Mail" "Heavy" "Wide" "Double" "Ornate"
+	Rarity Normal Magic
+	AreaLevel >= 65
+
+Show # HIGH TIER AMULETS and RINGS
+	Class "Rings" "Amulets"
+	BaseType "Topaz" "Sapphire" "Ruby" "Amethyst" "Gold" "Solar" "Prismatic" "Breach" "Bloodstone" "Lunar"
+	Rarity Normal Magic Rare
+	SetBorderColor 200 0 0 170
+	AreaLevel >= 65
+
+Show # ALL RARE BELTS
+	Class "Belts"
+	Rarity Rare
+	SetBorderColor 200 0 0 170
+	AreaLevel >= 65
+	
+Show # HIGH LEVEL BASE - MAGIC and NORMAL
+	Rarity <= Magic
+	SetFontSize 30
+	ItemLevel < 82
+	AreaLevel >= 65
+	
+Show # HIGH LEVEL BASE - RARE
+	Rarity = Rare
+	SetFontSize 36
+	ItemLevel < 82
+	AreaLevel >= 65
+
+Show # TOP BASE - MAGIC
+	Rarity = Magic
+	SetFontSize 40
+	SetBorderColor 205 0 132
+	ItemLevel >= 82
+	AreaLevel >= 80
+	
+Show # TOP BASE - RARE
+	Rarity = Rare
+	SetFontSize 40
+	SetBorderColor 205 0 132
+	ItemLevel >= 82
+	AreaLevel >= 80
+
+
+#==============================
+#       SAFETY FEATURES
+#==============================
+
+
+Show # UNKNOWN CURRENCY
+	Class "Currency"
+	SetTextColor 255 207 132
+	SetBorderColor 255 207 132
+	SetBackgroundColor 76 51 12
+
+Show # SAFETY FOR ALL NON-FILTERED ITEMS
+	SetFontSize 50
